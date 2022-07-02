@@ -46,3 +46,6 @@ testem.log
 Thumbs.db
 
 *.DS_Store
+/PrimeNG/issue1434/.vscode/extensions.json
+/PrimeNG/issue1434/.vscode/launch.json
+/PrimeNG/issue1434/.vscode/tasks.json
