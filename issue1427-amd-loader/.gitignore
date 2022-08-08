@@ -1,0 +1,12 @@
+.angular/
+node_modules
+dist
+.vs
+coverage
+.scannerwork
+sh.exe.stackdump
+cypress/videos
+cypress/screenshots
+reports
+*.log
+.jest-cache/
