@@ -1,0 +1,5 @@
+<p-dialog header="Modal PDF viewer" [(visible)]="display">
+  <app-example-pdf-viewer *ngIf="display"></app-example-pdf-viewer>>
+</p-dialog>
+
+<button type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show">Show dialog</button>
