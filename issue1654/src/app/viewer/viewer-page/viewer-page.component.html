@@ -1,0 +1,39 @@
+<div>
+  <ng-container *ngTemplateOutlet="expansionPanelTemplate"></ng-container>
+  <ng-template #expansionPanelTemplate>
+    <table>
+      <tr>
+        Row one
+        <button (click)="openPdf()">Open first PDF</button>
+      </tr>
+      <tr>
+        Row two
+        <button (click)="openAnotherPdf()">Open second PDF</button>
+
+      </tr>
+    </table>
+    <div>
+      <div *ngIf="showPrimaryPdf">
+        <ng-container>
+          <ng-container *ngTemplateOutlet="pdfViewerTemplate;context:{pdfUrl: pdfUrl}"></ng-container>
+        </ng-container>
+      </div>
+      <div *ngIf="showSecondaryPdf">
+        <ng-container>
+          <ng-container *ngTemplateOutlet="pdfViewerTemplate;context:{pdfUrl: pdfUrl}"></ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<ng-template #pdfViewerTemplate let-pdfUrl="pdfUrl">
+  <mat-card>
+    <ngx-extended-pdf-viewer
+    [src]="pdfUrl"
+    [useBrowserLocale]="true"
+    [zoom]="'auto'"
+    >
+    </ngx-extended-pdf-viewer>
+  </mat-card>
+</ng-template>
